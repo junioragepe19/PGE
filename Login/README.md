@@ -1,24 +1,15 @@
 # Aplicação
 
-## Project setup
+## Configuração do projeto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilação e execução da aplicação na porta 3000
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm run serve -- --port 3000
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### No momento que a aplicação estiver sendo executada, ela será vista acessando o link do login: 
+### [LOGIN](http://localhost:3000/login)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
