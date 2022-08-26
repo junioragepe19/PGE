@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
 
@@ -35,17 +34,14 @@ export default {
 
   methods: {
     login: function(){
+      var login_user = {usuario: "usuariopge", senha: "senhapge123"}
       var data = {usuario: name_user.value, senha: pass_user.value}
-      console.log(data)
-      axios.post('/localhost:8080/api/', data).then((response) =>{
-        console.log(response.data)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    },
-    IncorretPassword: function() {
-      this.$refs.error_login.style['visibility'] = "visible";
+      if(login_user.usuario == data.usuario && login_user.senha == data.senha){
+        window.open("Home",'_self')
+      }
+      else{
+        this.$refs.error_login.style['visibility'] = "visible";
+      }
     },
     ShowPass: function(){
       this.$refs.show_pass.style['visibility'] = "hidden";
