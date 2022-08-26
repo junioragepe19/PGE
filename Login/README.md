@@ -11,5 +11,5 @@ npm run serve -- --port 3000
 ```
 
 ### No momento que a aplicação estiver sendo executada, ela será vista acessando o link do login: 
-### [LOGIN](localhost:3000/login)
+### [LOGIN](https://localhost:3000/login)
 
