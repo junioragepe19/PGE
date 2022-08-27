@@ -21,6 +21,7 @@
 </template>
 
 <script>
+//import axios from 'axios'
 
 export default {
 
@@ -34,10 +35,16 @@ export default {
 
   methods: {
     login: function(){
-      var login_user = {usuario: "usuariopge", senha: "senhapge123"}
       var data = {usuario: name_user.value, senha: pass_user.value}
+      // axios.post('http://localhost:8080/login', data)//fazendo um post com esse usuario
+      //       .then(resposta => {
+      //           console.log(resposta)
+      //           this.$router.push({ name: 'home' })
+      //       })
+      //       .catch(erro => console.log(erro))
+      var login_user = {usuario: "usuariopge", senha: "senhapge123"}
       if(login_user.usuario == data.usuario && login_user.senha == data.senha){
-        window.open("Home",'_self')
+        this.$router.push({ name: 'home' })
       }
       else{
         this.$refs.error_login.style['visibility'] = "visible";
